@@ -1,0 +1,11 @@
+services:
+  web:
+    image: image_name
+    build:
+      context: .
+      target: production
+    ports:
+    - "3000:3000"
+    environment:
+      NODE_ENV: production
+      VITE_API_URL: http://localhost:8000

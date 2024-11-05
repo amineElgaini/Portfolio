@@ -1,0 +1,20 @@
+services:
+  web:
+    image: image_name
+    build:
+      context: .
+      target: development
+    ports:
+      - "8080:8080"
+    environment:
+      NODE_ENV: development
+    
+    develop:
+      watch:
+        - path: ./package.json
+          action: rebuild
+        - path: ./package-lock.json
+          action: rebuild
+        - path: ./
+          target: /app
+          action: sync
