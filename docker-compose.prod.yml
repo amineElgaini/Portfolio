@@ -1,6 +1,6 @@
 services:
   web:
-    image: image_name
+    image: portfolio
     build:
       context: .
       target: production
