@@ -2,23 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< Updated upstream
-=======
+
 /* ---------------------------------- *\
  * base
 \* ---------------------------------- */
 
->>>>>>> Stashed changes
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-<<<<<<< Updated upstream
   @apply bg-zinc-900 text-zinc-50
-}
-=======
-    @apply bg-zinc-900 text-zinc-50;
 }
 
 /* ---------------------------------- *\
@@ -56,10 +50,6 @@ body {
 .img-cover {
     @apply w-full h-full object-cover;
 }
-
-/* ---------------------------------- *\
- * base
-\* ---------------------------------- */
 
 /* menu button */
 .menu-btn {
@@ -119,4 +109,4 @@ body {
 .btn-outline {
     @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800
 }
->>>>>>> Stashed changes
+

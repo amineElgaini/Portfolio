@@ -1,24 +1,17 @@
-import './App.css'
-<<<<<<< Updated upstream
-=======
-import Header from './components/Header'
-import Hero from './components/Hero'
->>>>>>> Stashed changes
+import "./App.css";
+
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
-
-  return (
-    <>
-<<<<<<< Updated upstream
-      Hi
-=======
-      <Header/>
-      <main>
-        <Hero/>
-      </main>
->>>>>>> Stashed changes
-    </>
-  )
+    return (
+        <>
+            <Header />
+            <main>
+                <Hero />
+            </main>
+        </>
+    );
 }
 
-export default App
+export default App;
