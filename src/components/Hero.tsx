@@ -6,7 +6,7 @@ function Hero() {
             <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-10">
                 <div>
                     <div className="flex items-center gap-3">
-                        <figure className="img-box w-9 h-9 rounded-lg">
+                        <figure className="img-box w-9 h-9 rounded-full">
                             <img
                                 className="img-cover"
                                 src="/images/my-picture.png"
@@ -23,7 +23,7 @@ function Hero() {
                         </div>
                     </div>
 
-                    <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch]lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
+                    <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
                         Building Modern Websites for the Future
                     </h2>
 
