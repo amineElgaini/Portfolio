@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* ---------------------------------- *\
  * base
 \* ---------------------------------- */
@@ -12,7 +11,7 @@ html {
 }
 
 body {
-  @apply bg-zinc-900 text-zinc-50
+    @apply bg-zinc-900 text-zinc-50;
 }
 
 /* ---------------------------------- *\
@@ -32,11 +31,11 @@ body {
 }
 
 .headline-2 {
-    @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
+    @apply text-3xl lg:text-4xl lg:leading-tight font-semibold;
 }
 
 .title-1 {
-    @apply text-[22px] font-normal
+    @apply text-[22px] font-normal;
 }
 
 .material-symbols-rounded {
@@ -57,11 +56,11 @@ body {
 }
 
 .section {
-    @apply pt-20 lg:pt-32
+    @apply pt-20 lg:pt-32;
 }
 
 .reveal-up {
-    @apply translate-y-20 opacity-0
+    @apply translate-y-20 opacity-0;
 }
 
 /* menu button */
@@ -111,7 +110,7 @@ body {
     @apply text-[18px];
 }
 
-.btn:has( .material-symbols-rounded) {
+.btn:has(.material-symbols-rounded) {
     @apply pr-3;
 }
 
@@ -120,6 +119,19 @@ body {
 }
 
 .btn-outline {
-    @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800
+    @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800;
 }
 
+/* Text field */
+
+.label {
+    @apply block text-zinc-200 text-sm font-normal mb-2;
+}
+
+.text-field {
+    @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-800 rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2;
+}
+
+.text-field::placeholder {
+    @apply text-zinc-400;
+}
