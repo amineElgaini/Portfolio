@@ -9,7 +9,7 @@ function Hero() {
                         <figure className="img-box w-9 h-9 rounded-full">
                             <img
                                 className="img-cover"
-                                src="/images/my-picture.png"
+                                src="/images/my-picture-view.jpg"
                                 width={40}
                                 height={40}
                                 alt="Amine Elgaini"
