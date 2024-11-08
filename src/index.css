@@ -39,10 +39,6 @@ body {
     @apply text-[22px] font-normal
 }
 
-/* ---------------------------------- *\
- * utility
-\* ---------------------------------- */
-
 .material-symbols-rounded {
     @apply w-[1em] h-[1em] overflow-hidden;
     font-variation-settings: "FILL" 0, "wght" 400, "GARD" 0, "opsz" 24;
@@ -62,6 +58,10 @@ body {
 
 .section {
     @apply pt-20 lg:pt-32
+}
+
+.reveal-up {
+    @apply translate-y-20 opacity-0
 }
 
 /* menu button */

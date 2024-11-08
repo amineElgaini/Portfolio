@@ -1,5 +1,3 @@
-import React from "react";
-
 function ProjectCard({ imgSrc, title, tags, projectLink, classes }) {
     return (
         <div
@@ -14,13 +12,12 @@ function ProjectCard({ imgSrc, title, tags, projectLink, classes }) {
                     alt={title}
                     loading="lazy"
                     className="img-cover"
-                    alt=""
                 />
             </figure>
 
             <div className="flex items-center justify-between gap-4">
                 <div>
-                    <h3 className="title-1 mb-3">{title}</h3>
+                    <h3 className="title-1 mb-3 text-left">{title}</h3>
                     <div className="flex flex-wrap items-center gap-2">
                         {tags.map((label, key) => (
                             <span
@@ -45,7 +42,7 @@ function ProjectCard({ imgSrc, title, tags, projectLink, classes }) {
                 <a
                     href={projectLink}
                     target="_blank"
-                    className="absolute in"
+                    className="absolute inset-0"
                 ></a>
             </div>
         </div>

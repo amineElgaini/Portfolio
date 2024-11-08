@@ -16,7 +16,7 @@ function ReviewCard({ content, name, imgSrc, company }) {
                 ))}
             </div>
 
-            <p className="text-zinc-400 mb-8">{content}</p>
+            <p className="text-zinc-400 mb-8 text-left">{content}</p>
 
             <div className="flex items-center gap-2 mt-auto">
                 <figure className="img-box rounded-lg">
@@ -30,7 +30,8 @@ function ReviewCard({ content, name, imgSrc, company }) {
                     />
                 </figure>
 
-                <div>
+                <div className="text-left">
+                    <p>{name}</p>
                     <p className="text-xs text-zinc-400 tracking-wider">
                         {company}
                     </p>

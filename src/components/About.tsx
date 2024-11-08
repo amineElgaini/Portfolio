@@ -15,7 +15,7 @@ function About() {
     return (
         <section id="about" className="section text-left">
             <div className="container">
-                <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12">
+                <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
                     <p className="text-zinc-300 mg-4 md:mb-8 md:text-xl md:max-w-[60ch]">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         A iusto aperiam repellat reprehenderit fugiat,
