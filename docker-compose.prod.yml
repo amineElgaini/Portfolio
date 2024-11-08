@@ -1,6 +1,6 @@
 services:
   web:
-    image: portfolio
+    image: amineelgaini/portfolio
     build:
       context: .
       target: production
