@@ -1,4 +1,3 @@
-import "./App.css";
 
 import { ReactLenis } from "lenis/react";
 import gsap from "gsap";
@@ -14,6 +13,7 @@ import Review from "./components/Review";
 import Skill from "./components/Skill";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
     useGSAP(() => {
@@ -45,6 +45,7 @@ function App() {
                 <Review />
                 <Contact />
             </main>
+                <Footer />
         </ReactLenis>
     );
 }

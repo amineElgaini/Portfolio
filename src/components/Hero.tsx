@@ -2,7 +2,7 @@ import { ButtonPrimary, ButtonOutline } from "./Button";
 
 function Hero() {
     return (
-        <section id="home" className="pt-20 lg:pt-28 text-left">
+        <section id="home" className="pt-24 lg:pt-28 text-left">
             <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-10">
                 <div>
                     <div className="flex items-center gap-3">
