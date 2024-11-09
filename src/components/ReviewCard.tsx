@@ -1,7 +1,14 @@
-const ratings = new Array(5);
+interface ReviewCardProps {
+    content: string;
+    name: string;
+    imgSrc: string;
+    company: string;
+}
+
+const ratings: Array<{ icon: string; style: React.CSSProperties }> = new Array(5);
 ratings.fill({ icon: "star", style: { fontVariationSettings: '"FILL" 1' } });
 
-function ReviewCard({ content, name, imgSrc, company }) {
+function ReviewCard({ content, name, imgSrc, company }: ReviewCardProps) {
     return (
         <div className="bg-zinc-800 p-5 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px]">
             <div className="flex items-center gap-1 mb-3">

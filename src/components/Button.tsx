@@ -1,6 +1,18 @@
-import React from "react";
+interface ButtonProps {
+    href?: string;
+    target?: "_self" | "_blank" | "_parent" | "_top";
+    label: string;
+    icon?: string;
+    classes?: string;
+}
 
-function ButtonPrimary({ href, target = "_slef", label, icon, classes }) {
+function ButtonPrimary({
+    href,
+    target = "_self",
+    label,
+    icon,
+    classes = "",
+}: ButtonProps) {
     if (href) {
         return (
             <a
@@ -13,7 +25,9 @@ function ButtonPrimary({ href, target = "_slef", label, icon, classes }) {
                     <span
                         className="material-symbols-rounded"
                         aria-hidden="true"
-                    >{icon}</span>
+                    >
+                        {icon}
+                    </span>
                 ) : undefined}
             </a>
         );
@@ -25,16 +39,22 @@ function ButtonPrimary({ href, target = "_slef", label, icon, classes }) {
                     <span
                         className="material-symbols-rounded"
                         aria-hidden="true"
-                    >{icon}</span>
+                    >
+                        {icon}
+                    </span>
                 ) : undefined}
             </button>
         );
     }
 }
 
-
-
-function ButtonOutline({ href, target = "_slef", label, icon, classes }) {
+function ButtonOutline({
+    href,
+    target = "_self",
+    label,
+    icon,
+    classes = "",
+}: ButtonProps) {
     if (href) {
         return (
             <a
@@ -47,7 +67,9 @@ function ButtonOutline({ href, target = "_slef", label, icon, classes }) {
                     <span
                         className="material-symbols-rounded"
                         aria-hidden="true"
-                    >{icon}</span>
+                    >
+                        {icon}
+                    </span>
                 ) : undefined}
             </a>
         );
@@ -59,11 +81,13 @@ function ButtonOutline({ href, target = "_slef", label, icon, classes }) {
                     <span
                         className="material-symbols-rounded"
                         aria-hidden="true"
-                    >{icon}</span>
+                    >
+                        {icon}
+                    </span>
                 ) : undefined}
             </button>
         );
     }
 }
 
-export {ButtonPrimary, ButtonOutline};
+export { ButtonPrimary, ButtonOutline };

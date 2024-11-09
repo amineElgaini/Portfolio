@@ -1,4 +1,3 @@
-import { ReactLenis } from "lenis/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -7,7 +6,14 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 import ReviewCard from "./ReviewCard";
 
-const reviews = [
+interface Reviews {
+    content: string;
+    name: string;
+    imgSrc: string;
+    company: string;
+}
+
+const reviews: Reviews[] = [
     {
         content:
             "Exceptional web development! Delivered a seamless, responsive site with clean code and great UX.",

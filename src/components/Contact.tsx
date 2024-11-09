@@ -1,4 +1,10 @@
-const socialLinks = [
+interface SocialLink {
+    href: string;
+    icon: JSX.Element;
+    alt: string;
+}
+
+const socialLinks: SocialLink[] = [
     {
         href: "https://github.com/amineElgaini",
         icon: (

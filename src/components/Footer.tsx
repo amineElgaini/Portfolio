@@ -1,6 +1,11 @@
 import { ButtonPrimary } from "./Button";
 
-const sitemap = [
+interface LinkItem {
+    label: string;
+    href: string;
+}
+
+const sitemap: LinkItem[] = [
     {
         label: "Home",
         href: "#home",
@@ -23,7 +28,7 @@ const sitemap = [
     },
 ];
 
-const socials = [
+const socials: LinkItem[] = [
     {
         label: "GitHub",
         href: "https://www.github.com/codewithsadee-org",
