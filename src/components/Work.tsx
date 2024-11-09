@@ -1,29 +1,42 @@
 import ProjectCard from "./ProjectCard";
 
-const works = [
+interface Works {
+    imgSrc: string;
+    title: string;
+    tags: string[];
+    projectLink: string;
+}
+
+const works: Works[] = [
     {
-        imgSrc: "/images/project-1.jpg",
-        title: "Book Rent App",
-        tags: ["API", "React", "Laravel"],
-        projectLink: "https://musify-5al0.onrender.com/",
+        imgSrc: "/images/project-1.png",
+        title: "Portfolio Website",
+        tags: ["React", "TypeScript", "Tailwind"],
+        projectLink: "https://github.com/amineElgaini/Portfolio",
     },
     {
-        imgSrc: "/images/project-2.jpg",
+        imgSrc: "/images/project-2.png",
+        title: "Book Rent App",
+        tags: ["React", "Laravel", "API"],
+        projectLink: "https://github.com/amineElgaini/Library",
+    },
+    {
+        imgSrc: "/images/project-3.png",
+        title: "Driver License App",
+        tags: ["C#", "MVC", ".NET"],
+        projectLink: "/",
+    },
+    {
+        imgSrc: "/images/project-4.png",
         title: "Blog App",
         tags: ["React", "API"],
-        projectLink: "https://pixstock-official.vercel.app/",
+        projectLink: "https://github.com/amineElgaini/blogApp",
     },
     {
-        imgSrc: "/images/project-1.jpg",
-        title: "Book Rent App",
-        tags: ["API", "React", "Laravel"],
-        projectLink: "https://musify-5al0.onrender.com/",
-    },
-    {
-        imgSrc: "/images/project-2.jpg",
-        title: "Blog App",
-        tags: ["React", "API"],
-        projectLink: "https://pixstock-official.vercel.app/",
+        imgSrc: "/images/project-5.png",
+        title: "Quiz App",
+        tags: ["JavaScript", "CSS", "HTML"],
+        projectLink: "/",
     },
 ];
 

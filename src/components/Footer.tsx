@@ -31,23 +31,15 @@ const sitemap: LinkItem[] = [
 const socials: LinkItem[] = [
     {
         label: "GitHub",
-        href: "https://www.github.com/codewithsadee-org",
+        href: "https://github.com/amineElgaini",
     },
     {
         label: "LinkedIn",
-        href: "https://www.linkedin.com/in/codewithsadee",
-    },
-    {
-        label: "Twitter X",
-        href: "https://x.com/codewithsadee_",
+        href: "https://www.linkedin.com/in/amine-elgaini-23806a299/",
     },
     {
         label: "Instagram",
-        href: "https://www.instagram.com/codewithsadee",
-    },
-    {
-        label: "CodePen",
-        href: "https://codepen.io/codewithsadee",
+        href: "https://www.instagram.com/amine_elgaini/",
     },
 ];
 

@@ -1,4 +1,17 @@
-function ProjectCard({ imgSrc, title, tags, projectLink, classes }) {
+interface ProjectCardProps {
+    imgSrc: string;
+    title: string;
+    tags: string[];
+    projectLink: string;
+    classes?: string;
+}
+function ProjectCard({
+    imgSrc,
+    title,
+    tags,
+    projectLink,
+    classes = "",
+}: ProjectCardProps) {
     return (
         <div
             className={

@@ -26,7 +26,7 @@ function ReviewCard({ content, name, imgSrc, company }: ReviewCardProps) {
             <p className="text-zinc-400 mb-8 text-left">{content}</p>
 
             <div className="flex items-center gap-2 mt-auto">
-                <figure className="img-box rounded-lg">
+                <figure className="img-box rounded-lg w-[44px] h-[44px]">
                     <img
                         src={imgSrc}
                         alt={name}

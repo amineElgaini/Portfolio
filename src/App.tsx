@@ -1,3 +1,5 @@
+import { Toaster, toast } from "sonner";
+
 import { ReactLenis } from "lenis/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,6 +15,7 @@ import Skill from "./components/Skill";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { useEffect } from "react";
 
 function App() {
     useGSAP(() => {
@@ -33,8 +36,14 @@ function App() {
         });
     });
 
+    useEffect(() => {
+        toast.info("The portfolio in note completed yet, still have some fake data");
+        console.log("hi")
+    }, []);
+
     return (
         <ReactLenis root>
+            <Toaster richColors />
             <Header />
             <main>
                 <Hero />
