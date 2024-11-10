@@ -2,9 +2,9 @@ import { ButtonPrimary, ButtonOutline } from "./Button";
 
 function Hero() {
     return (
-        <section id="home" className="pt-24 lg:pt-28 text-left">
-            <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-10">
-                <div>
+        <section id="home" className="pt-24 lg:pt-36 text-left">
+            <div className="container grid grid-row-2 gap-8 lg:grid lg:grid-cols-2 items-center lg:gap-10">
+                <div className="order-1 lg:order-1">
                     <div className="flex items-center gap-3">
                         <figure className="img-box w-9 h-9 rounded-full">
                             <img
@@ -39,13 +39,13 @@ function Hero() {
                         />
                     </div>
                 </div>
-                <div className="hidden lg:block">
-                    <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
+                <div className="lg:order-2 mx-4">
+                    <figure className="w-full max-w-[200px] sm:max-w-[300px] lg:max-w-[400px] mx-auto lg:ml-auto">
                         <img
-                            width={552}
-                            height={736}
-                            className="w-full"
-                            src="/images/my-picture.png"
+                            width={700}
+                            height={700}
+                            className="w-full ring-8 ring-cyan-600 bg-gray-800/70 hero_image"
+                            src="./images/my-picture.png"
                             alt=""
                         />
                     </figure>
