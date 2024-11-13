@@ -29,8 +29,11 @@ function Hero() {
 
                     <div className="flex items-center gap-3">
                         <ButtonPrimary
+                            href="./docs/Amine-Elgaini(CV).pdf"
                             label={"Download CV"}
                             icon={"download"}
+                            download={true}
+                            downloadFileName={"Amine-Elgaini(CV)"}
                         />{" "}
                         <ButtonOutline
                             href={"#about"}

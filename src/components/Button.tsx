@@ -4,6 +4,8 @@ interface ButtonProps {
     label: string;
     icon?: string;
     classes?: string;
+    download?: boolean;
+    downloadFileName?: string;
 }
 
 function ButtonPrimary({
@@ -12,6 +14,8 @@ function ButtonPrimary({
     label,
     icon,
     classes = "",
+    download = false,
+    downloadFileName = "",
 }: ButtonProps) {
     if (href) {
         return (
@@ -19,6 +23,8 @@ function ButtonPrimary({
                 href={href}
                 target={target}
                 className={"btn btn-primary " + classes}
+                {...(download ? { download: "Amine-Elgaini-(CV)" } : {})}
+                {...(download ? { download: downloadFileName } : {})}
             >
                 {label}{" "}
                 {icon ? (
