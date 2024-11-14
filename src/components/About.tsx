@@ -15,11 +15,16 @@ function About() {
             <div className="container">
                 <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
                     <p className="text-zinc-300 mg-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        A iusto aperiam repellat reprehenderit fugiat,
-                        dignissimos cum, ad error officia magnam vero sequi,
-                        nostrum cupiditate perspiciatis expedita dolorem quas
-                        ipsum nulla.
+                        I'm a passionate software developer with a strong
+                        foundation in web development and expertise in both
+                        front-end and back-end technologies, like the MERN
+                        stack, and tools like Git and Docker. With hands-on
+                        experience in building e-commerce platforms and
+                        collaborative team projects, I strive to create
+                        efficient, user-friendly applications. My focus is on
+                        continuous learning and contributing to innovative
+                        solutions, as I aim to grow my skills in dynamic
+                        environments.
                     </p>
                     <div className="flex flex-wrap items-center gap-4 md:gap-7">
                         {aboutItems.map(({ label, number }, key) => (
@@ -35,13 +40,16 @@ function About() {
                                 <p className="text-sm text-zinc-400">{label}</p>
                             </div>
                         ))}
-                        <img
-                            src="/images/boy.png"
-                            alt="Logo"
-                            width={30}
-                            height={30}
-                            className="ml-auto md:w-[40px] md:h-[40px]"
-                        />
+                        <figure className="img-box w-10 h-10 rounded-full ml-auto">
+                            <img
+                                className="img-cover"
+                                src="/images/my-picture-view.jpg"
+                                width={40}
+                                height={40}
+                                alt="Amine Elgaini"
+                            />
+                        </figure>
+                       
                     </div>
                 </div>
             </div>

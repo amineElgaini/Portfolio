@@ -8,12 +8,15 @@ function Header() {
             <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6 md:grid md:grid-cols-[1fr,3fr,1fr]">
                 <h1>
                     <a href="/" className="logo">
-                        <img
-                            src="./images/boy.png"
-                            width={40}
-                            height={40}
-                            alt="Amine Elgaini"
-                        />
+                    <figure className="img-box w-10 h-10 rounded-full">
+                            <img
+                                className="img-cover"
+                                src="/images/my-picture-view.jpg"
+                                width={40}
+                                height={40}
+                                alt="Amine Elgaini"
+                            />
+                        </figure>
                     </a>
                 </h1>
 

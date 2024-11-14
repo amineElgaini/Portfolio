@@ -35,7 +35,7 @@ const socials: LinkItem[] = [
     },
     {
         label: "LinkedIn",
-        href: "https://www.linkedin.com/in/amine-elgaini-23806a299/",
+        href: "https://www.linkedin.com/in/amine-elgaini",
     },
     {
         label: "Instagram",
@@ -98,12 +98,16 @@ function Footer() {
 
                 <div className="flex items-center justify-between pt-10 mb-8">
                     <a href="/" className="logo reveal-up">
-                        <img
-                            src="/images/boy.png"
-                            width={40}
-                            height={40}
-                            alt="Logo"
-                        />
+                       
+                        <figure className="img-box w-10 h-10 rounded-full">
+                            <img
+                                className="img-cover"
+                                src="/images/my-picture-view.jpg"
+                                width={40}
+                                height={40}
+                                alt="Amine Elgaini"
+                            />
+                        </figure>
                     </a>
                     <p className="text-zinc-400 text-sm reveal-up">
                         &copy: 2024{" "}

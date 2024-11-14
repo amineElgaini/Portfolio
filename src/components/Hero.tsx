@@ -6,7 +6,7 @@ function Hero() {
             <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-10">
                 <div>
                     <div className="flex items-center gap-3">
-                        <figure className="img-box w-9 h-9 rounded-full">
+                        <figure className="img-box w-10 h-10 rounded-full">
                             <img
                                 className="img-cover"
                                 src="/images/my-picture-view.jpg"

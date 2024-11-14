@@ -10,7 +10,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 import About from "./components/About";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Review from "./components/Review";
+// import Review from "./components/Review";
 import Skill from "./components/Skill";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
@@ -37,7 +37,7 @@ function App() {
     });
 
     useEffect(() => {
-        toast.info("The portfolio in note completed yet, still have some fake data");
+        toast.info("The portfolio in not completed yet, still have some fake data");
         console.log("hi")
     }, []);
 
@@ -50,7 +50,7 @@ function App() {
                 <About />
                 <Skill />
                 <Work />
-                <Review />
+                {/* <Review /> */}
                 <Contact />
             </main>
             <Footer />
