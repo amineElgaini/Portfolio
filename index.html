@@ -1404,31 +1404,74 @@
         justify-content: space-between
       }
     } */
-     .logo { flex: none; display: block; width: 36px; height: 36px }
-.logo img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top;
-  border: 2px solid var(--g);
-  display: block;
-}
-nav .wrap { gap: 1rem }
-nav ul { flex: 1; justify-content: center; min-width: 0 }
+    .logo {
+      flex: none;
+      display: block;
+      width: 36px;
+      height: 36px
+    }
 
-@media (max-width: 820px) {
-  nav ul {
-    gap: .6rem;
-    font-size: .8rem;
-    white-space: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  nav ul::-webkit-scrollbar { display: none }
-  .lang button[aria-pressed="true"] { display: none }
-  .lang button { padding: .25rem .55rem; font-size: .75rem }
-}
+    .logo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      border: 2px solid var(--g);
+      display: block;
+    }
+
+    nav .wrap {
+      gap: 1rem
+    }
+
+    nav ul {
+      flex: 1;
+      justify-content: center;
+      min-width: 0
+    }
+
+    @media (max-width: 820px) {
+      nav .wrap {
+        height: auto;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        row-gap: .4rem;
+      }
+
+      /* row 1: avatar left, language right */
+      .logo {
+        order: 1;
+        margin-right: auto
+      }
+
+      .lang {
+        order: 2
+      }
+
+      /* row 2: links, full width */
+      nav ul {
+        order: 3;
+        flex: none;
+        width: 100%;
+        justify-content: space-between;
+        gap: .6rem;
+        font-size: .85rem;
+        white-space: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      nav ul::-webkit-scrollbar {
+        display: none
+      }
+
+      html {
+        scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 96px)
+      }
+    }
   </style>
 </head>
 
@@ -1480,8 +1523,8 @@ nav ul { flex: 1; justify-content: center; min-width: 0 }
   </svg>
   <nav>
     <div class="wrap"><a class="logo" href="#" aria-label="Amine Elgaini — back to top">
-  <img src="me.webp" alt="" width="36" height="36">
-</a>
+        <img src="me.webp" alt="" width="36" height="36">
+      </a>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
