@@ -102,6 +102,29 @@ nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--g)}
 footer{background:var(--g2);color:#EAF1E1;text-align:center;padding:1.5rem 1rem calc(1.5rem + env(safe-area-inset-bottom,0px));font-size:.9rem}
 .rv{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.mq div,.cl,.bird,.walker{animation:none}.btn,.card{transition:none}}
+
+.walker svg *{transform-box:fill-box}
+.walker .fig{transform-origin:50% 100%;animation:wlunge 2.4s ease-in-out infinite}
+.walker .cape{transform-origin:50% 0;animation:wcape 2.4s ease-in-out infinite}
+.walker .head{transform-origin:50% 100%;animation:whead 2.4s ease-in-out infinite}
+.walker .band{transform-origin:100% 50%;animation:wband .5s ease-in-out infinite alternate}
+.walker .eyes{transform-origin:50% 50%;animation:wblink 4.8s infinite}
+.walker .arm{transform-box:view-box;transform-origin:0 0;transform:rotate(-25deg);animation:wswing 2.4s infinite}
+.walker .trail{transform-box:view-box;stroke-dasharray:100 100;stroke-dashoffset:100;opacity:0;animation:wtrail 2.4s infinite}
+.walker .burst{transform-origin:50% 50%;opacity:0;animation:wburst 2.4s infinite}
+.walker.drag .fig,.walker.drag .head,.walker.drag .arm,.walker.drag .trail,.walker.drag .burst{animation:none}
+.walker.drag .trail,.walker.drag .burst{opacity:0}
+@keyframes wlunge{0%,100%{transform:translate(0,0) rotate(0)}20%{transform:translate(-6px,0) rotate(-3deg)}38%{transform:translate(9px,2px) rotate(4deg)}62%{transform:translate(6px,0) rotate(2deg)}}
+@keyframes wcape{0%,100%{transform:skewX(0)}20%{transform:skewX(-6deg) scaleX(1.03)}40%{transform:skewX(11deg) scaleX(.96)}70%{transform:skewX(4deg)}}
+@keyframes whead{0%,100%{transform:rotate(0)}20%{transform:rotate(-3deg)}38%{transform:rotate(4deg)}}
+@keyframes wband{from{transform:rotate(-7deg) skewY(-4deg)}to{transform:rotate(8deg) skewY(5deg)}}
+@keyframes wblink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+@keyframes wswing{0%{transform:rotate(-25deg);animation-timing-function:ease-out}20%{transform:rotate(-42deg);animation-timing-function:cubic-bezier(.85,0,1,.5)}38%{transform:rotate(115deg);animation-timing-function:ease-out}56%{transform:rotate(108deg);animation-timing-function:ease-in-out}85%,100%{transform:rotate(-25deg)}}
+@keyframes wtrail{0%,26%{stroke-dashoffset:100;opacity:1;animation-timing-function:cubic-bezier(.85,0,1,.5)}38%{stroke-dashoffset:0;opacity:1;animation-timing-function:ease-out}54%{stroke-dashoffset:-100;opacity:1}55%,100%{stroke-dashoffset:-100;opacity:0}}
+@keyframes wburst{0%,36%{transform:scale(.2);opacity:0}39%{transform:scale(.8);opacity:1}52%{transform:scale(1.5) rotate(20deg);opacity:0}100%{opacity:0}}
+.walker{width:128px}
+@media(max-width:820px){.walker{width:100px}}
+@media(prefers-reduced-motion:reduce){.walker svg *{animation:none!important}.walker .trail,.walker .burst{opacity:0}}
 </style>
 </head>
 <body>
@@ -159,7 +182,93 @@ footer{background:var(--g2);color:#EAF1E1;text-align:center;padding:1.5rem 1rem 
 <div class="trees" aria-hidden="true"><svg class="tr" style="left:3%;width:86px;height:143px"><use href="#tree"/></svg><svg class="tr hm" style="left:14%;width:58px;height:97px"><use href="#pine"/></svg><svg class="tr" style="left:22%;width:22px;height:37px"><use href="#fl"/></svg><svg class="tr hm" style="left:70%;width:84px;height:131px"><use href="#palm"/></svg><svg class="tr" style="left:82%;width:84px;height:140px"><use href="#tree"/></svg><svg class="tr" style="left:92%;width:66px;height:33px"><use href="#bush"/></svg></div><svg class="hills" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true"><path fill="#CFE5D3" d="M0 110C150 50 300 60 450 100S750 150 900 90s220-40 300 0v130H0z"/><path fill="#A9CFAE" d="M0 150C200 100 380 120 560 150S900 180 1200 120v100H0z"/><path fill="#2F5D46" d="M0 190c200-30 420-20 640 0s380 10 560-20v50H0z"/></svg></section>
 <footer>Amine Elgaini · Safi, Morocco</footer>
 
-<div class="walker" id="walker" tabindex="0" role="img" aria-label="Avatar of Amine, drag it around the page"><svg viewBox="0 0 100 150"><ellipse cx="50" cy="144" rx="26" ry="5" fill="rgba(31,58,46,.2)"/><g class="lg l"><rect x="36" y="100" width="12" height="38" rx="6" fill="#2B3F58"/><ellipse cx="40" cy="140" rx="10" ry="5" fill="#1B1B20"/></g><g class="lg r"><rect x="52" y="100" width="12" height="38" rx="6" fill="#2B3F58"/><ellipse cx="60" cy="140" rx="10" ry="5" fill="#1B1B20"/></g><rect x="14" y="68" width="12" height="36" rx="6" fill="#23374D"/><rect x="74" y="68" width="12" height="36" rx="6" fill="#23374D"/><circle cx="20" cy="106" r="6" fill="#C98F63"/><circle cx="80" cy="106" r="6" fill="#C98F63"/><path d="M26 106c-2-26 8-42 24-42s26 16 24 42z" fill="#23374D"/><path d="M44 64l6 10 6-10z" fill="#F7F3E6"/><rect x="44" y="54" width="12" height="12" rx="4" fill="#B87D52"/><circle cx="30" cy="40" r="4.5" fill="#C98F63"/><circle cx="70" cy="40" r="4.5" fill="#C98F63"/><ellipse cx="50" cy="40" rx="20" ry="23" fill="#C98F63"/><path d="M29 36c-2-19 10-27 21-27s23 8 21 27c-2-9-8-13-21-13s-19 4-21 13z" fill="#1B1B20"/><path d="M30 44c1 18 9 24 20 24s19-6 20-24c-2 7-6 11-20 11s-18-4-20-11z" fill="#1B1B20"/><path d="M44 55q6 4 12 0" stroke="#F7F3E6" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="43" cy="38" r="1.9" fill="#1B1B20"/><circle cx="57" cy="38" r="1.9" fill="#1B1B20"/></svg></div>
+<div class="walker" id="walker" tabindex="0" role="img" aria-label="Warrior avatar swinging a sword, drag it around the page"><svg viewBox="0 0 300 330" aria-hidden="true">
+<defs>
+<linearGradient id="wa-iris" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B4F4A"/><stop offset=".6" stop-color="#19B5A5"/><stop offset="1" stop-color="#8FF0D8"/></linearGradient>
+<linearGradient id="wa-blade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#8FB6E8"/></linearGradient>
+<linearGradient id="wa-trailg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".2"/><stop offset=".6" stop-color="#9FF3FF"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+<linearGradient id="wa-armor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2CC7B8"/><stop offset="1" stop-color="#14877E"/></linearGradient>
+</defs>
+
+<g transform="translate(0 20)">
+<ellipse cx="110" cy="290" rx="62" ry="8" fill="rgba(20,10,50,.25)"/>
+
+<g class="fig">
+  <!-- cape -->
+  <path class="cape" d="M64 132C34 172 30 232 42 268Q60 278 76 268T108 268T140 268Q160 276 158 262C168 230 160 170 156 132z" fill="#7B3FE4"/>
+  <path class="cape" d="M84 150C74 190 72 232 78 262Q92 268 108 262T136 262C142 230 136 190 136 150z" fill="#FF7A2F" opacity=".85"/>
+
+  <!-- legs -->
+  <g class="lg l"><rect x="76" y="224" width="22" height="46" rx="10" fill="#2B3A8F"/><path d="M72 266h30v10a6 6 0 01-6 6H78a6 6 0 01-6-6z" fill="#3B2A22"/><rect x="72" y="266" width="30" height="5" fill="#F7B32B"/></g>
+  <g class="lg r"><rect x="122" y="224" width="22" height="46" rx="10" fill="#2B3A8F"/><path d="M118 266h30v10a6 6 0 01-6 6h-18a6 6 0 01-6-6z" fill="#3B2A22"/><rect x="118" y="266" width="30" height="5" fill="#F7B32B"/></g>
+
+  <!-- body -->
+  <path d="M70 200H150L146 236H74z" fill="#2B3A8F"/>
+  <path d="M66 142C84 132 136 132 154 142L150 198H70z" fill="url(#wa-armor)"/>
+  <path d="M110 134V196" stroke="#0E6B63" stroke-width="2.5"/>
+  <path d="M76 156Q110 170 144 156" stroke="#F7B32B" stroke-width="3" fill="none"/>
+  <circle cx="110" cy="170" r="8" fill="#F7B32B"/><circle cx="110" cy="170" r="3.5" fill="#E63946"/>
+  <rect x="68" y="192" width="84" height="12" rx="3" fill="#6B3E26"/><rect x="102" y="193" width="16" height="10" rx="2" fill="#F7B32B"/>
+
+  <!-- shield arm -->
+  <rect x="42" y="146" width="22" height="46" rx="11" fill="#14877E"/>
+  <circle cx="46" cy="192" r="26" fill="#FF7A2F" stroke="#F7B32B" stroke-width="4"/>
+  <circle cx="46" cy="192" r="15" fill="#7B3FE4"/><circle cx="46" cy="192" r="6" fill="#F7B32B"/>
+  <path d="M46 172v8M46 204v8M26 192h8M58 192h8" stroke="#F7B32B" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- head -->
+  <g class="head">
+    <rect x="98" y="122" width="24" height="22" rx="8" fill="#C98A5E"/>
+    <ellipse cx="69" cy="92" rx="6" ry="9" fill="#D99C70"/><ellipse cx="151" cy="92" rx="6" ry="9" fill="#D99C70"/>
+    <path d="M70 74C70 52 150 52 150 74V96C150 118 136 132 110 134C84 132 70 118 70 96z" fill="#E8B48A"/>
+    <path d="M74 104C80 126 98 132 110 132C122 132 140 126 146 104C140 118 126 124 110 124C94 124 80 118 74 104z" fill="#4A2F2A" opacity=".2"/>
+    <path d="M84 98L91 109M82 104L90 100" stroke="#C0504A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+
+    <g class="eyes">
+      <ellipse cx="91" cy="90" rx="10" ry="9" fill="#fff"/><ellipse cx="129" cy="90" rx="10" ry="9" fill="#fff"/>
+      <ellipse cx="92" cy="91" rx="6.5" ry="8" fill="url(#wa-iris)"/><ellipse cx="128" cy="91" rx="6.5" ry="8" fill="url(#wa-iris)"/>
+      <ellipse cx="92" cy="91" rx="3" ry="5" fill="#101018"/><ellipse cx="128" cy="91" rx="3" ry="5" fill="#101018"/>
+      <circle cx="89.5" cy="87" r="2.4" fill="#fff"/><circle cx="125.5" cy="87" r="2.4" fill="#fff"/>
+      <path d="M79 86Q91 79 103 85M117 85Q129 79 141 86" stroke="#101018" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+    <path d="M78 76L102 81M142 76L118 81" stroke="#1B1F3B" stroke-width="5" stroke-linecap="round"/>
+    <path d="M110 94l-3 10h6" stroke="#B87D52" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M98 114Q110 119 124 110" stroke="#8A3F2E" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+
+    <!-- hair -->
+    <path d="M66 80C58 50 70 24 110 20C150 24 162 50 154 80L150 62L141 71L133 52L122 66L110 46L98 66L87 52L79 71L70 62z" fill="#1B1F3B"/>
+    <path d="M96 24L86 2L106 14L118 -2L124 22z" fill="#1B1F3B"/>
+    <path d="M142 34L162 24L154 46z" fill="#1B1F3B"/>
+    <path d="M80 40Q98 30 122 38" stroke="#6C5CF0" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M70 68Q110 80 150 68" stroke="#E63946" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path class="band" d="M72 68C58 62 42 76 24 64L28 80C44 86 58 78 74 76z" fill="#E63946"/>
+  </g>
+
+  <!-- sword arm: pivots at the shoulder -->
+  <g transform="translate(156 142)">
+    <g class="arm">
+      <rect x="-8" y="-40" width="16" height="44" rx="8" fill="#14877E"/>
+      <rect x="-3" y="-54" width="6" height="16" rx="2" fill="#6B3E26"/>
+      <path d="M0 -148L8 -132V-62H-8V-132z" fill="url(#wa-blade)"/>
+      <path d="M0 -138V-66" stroke="#9FB6D6" stroke-width="1.5"/>
+      <rect x="-17" y="-62" width="34" height="8" rx="3" fill="#F7B32B"/>
+      <circle cx="0" cy="-42" r="9" fill="#E8B48A"/>
+      <circle cx="0" cy="-55" r="3" fill="#E63946"/>
+    </g>
+    <!-- slash trail -->
+    <path class="trail" pathLength="100" d="M-54.9 -117.8A130 130 0 0 1 117.8 54.9" fill="none" stroke="url(#wa-trailg)" stroke-width="12" stroke-linecap="round"/>
+    <g class="burst" transform="translate(130 60)">
+      <path d="M0-16L4-5L16 0L4 5L0 16L-4 5L-16 0L-4-5z" fill="#FFE066"/>
+      <path d="M0-9L2-2L9 0L2 2L0 9L-2 2L-9 0L-2-2z" fill="#fff" transform="rotate(45)"/>
+    </g>
+  </g>
+
+  <!-- shoulder pads (over arm base) -->
+  <ellipse cx="156" cy="142" rx="18" ry="13" fill="#F7B32B"/><ellipse cx="156" cy="142" rx="11" ry="7" fill="#E63946"/>
+  <ellipse cx="64" cy="142" rx="18" ry="13" fill="#F7B32B"/><ellipse cx="64" cy="142" rx="11" ry="7" fill="#E63946"/>
+</g>
+</g>
+</svg></div>
 <script>
 (function(){
 var w=document.getElementById("walker"),ox,oy,lx;
