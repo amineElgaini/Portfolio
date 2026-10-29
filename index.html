@@ -1239,6 +1239,7 @@
     }
 
     @media (max-width: 820px) {
+
       .frame {
         order: -1;
         width: 150px
@@ -1393,7 +1394,7 @@
       color: #FFFCF2
     }
 
-    @media (max-width: 560px) {
+    /* @media (max-width: 560px) {
       nav b {
         display: none
       }
@@ -1402,7 +1403,32 @@
         gap: .6rem;
         justify-content: space-between
       }
-    }
+    } */
+     .logo { flex: none; display: block; width: 36px; height: 36px }
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--g);
+  display: block;
+}
+nav .wrap { gap: 1rem }
+nav ul { flex: 1; justify-content: center; min-width: 0 }
+
+@media (max-width: 820px) {
+  nav ul {
+    gap: .6rem;
+    font-size: .8rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  nav ul::-webkit-scrollbar { display: none }
+  .lang button[aria-pressed="true"] { display: none }
+  .lang button { padding: .25rem .55rem; font-size: .75rem }
+}
   </style>
 </head>
 
@@ -1453,7 +1479,9 @@
     </symbol>
   </svg>
   <nav>
-    <div class="wrap"><b>Amine Elgaini</b>
+    <div class="wrap"><a class="logo" href="#" aria-label="Amine Elgaini — back to top">
+  <img src="me.webp" alt="" width="36" height="36">
+</a>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
@@ -1479,31 +1507,6 @@
       stroke="#1F3A2E" stroke-width="2" stroke-linecap="round" aria-hidden="true">
       <path d="M1 8q8-10 16 0q8-10 16 0" />
     </svg>
-
-    <!-- <div class="wrap hg">
-      <div>
-        <p class="eyebrow">Amine Elgaini · Safi, Morocco · Open to work (Safi &amp; remote)</p>
-        <h1>Amine Elgaini</h1>
-        <p class="roles" id="roles" aria-live="polite">Full-Stack Developer</p>
-        <p class="l">I build complete web and mobile products — and I integrate real AI into them: recommendations, text
-          analysis, computer vision.</p>
-        <div class="btns">
-          <a class="btn p" href="#work">See my work</a>
-          <a class="btn" href="#contact">Contact me</a>
-          <a class="btn" href="Amine-Elgaini-CV.pdf" download>Download CV</a>
-        </div>
-      </div>
-      <div class="stats">
-        <div><b>3</b>products built</div>
-        <div><b>1</b>company internship</div>
-        <div><b>20</b>students taught</div>
-      </div>
-    </div>
-    <div class="frame">
-      <img src="me.webp" alt="Amine Elgaini" width="600" height="750" fetchpriority="high" decoding="async">
-    </div>
-    </div>
-    </div> -->
 
     <div class="wrap hg">
       <div>
@@ -1921,12 +1924,12 @@
   <script>
     (function () {
       var FR = {
-        "About": "À propos", "Work": "Projets", "Path": "Parcours", "Skills": "Compétences", "Contact": "Contact",
+        "About": "Profil", "Work": "Projets", "Path": "Parcours", "Skills": "Skills", "Contact": "Contact",
         "Amine Elgaini · Safi, Morocco · Open to work (Safi & remote)": "Amine Elgaini · Safi, Maroc · Disponible (Safi et à distance)",
         "I build complete web and mobile products — and I integrate real AI into them: recommendations, text analysis, computer vision.": "Je construis des produits web et mobiles complets, et j’y intègre de la vraie IA : recommandations, analyse de texte, vision par ordinateur.",
         "See my work": "Voir mes projets", "Contact me": "Me contacter", "Download CV": "Télécharger mon CV",
         "products built": "produits réalisés", "company internship": "stage en entreprise", "students taught": "étudiants formés",
-        "01 · About": "01 · À propos",
+        "01 · About": "01 · Profil",
         "Full-stack and AI developer trained at YouCode (UM6P).": "Développeur full-stack et IA formé à YouCode (UM6P).",
         "I design complete web and mobile applications (Flutter, ASP.NET Core, Laravel, React) and integrate AI solutions into them. During an internship at Technoparc, I delivered an application for Morocco’s annual dental salon that the client appreciated. I work with modern tools (Docker, CI/CD, Git) and in Agile teams. My goal: join a technical team building useful products that combine full-stack development and AI.": "Je conçois des applications web et mobiles complètes (Flutter, ASP.NET Core, Laravel, React) et j’y intègre des solutions d’IA. Lors d’un stage chez Technoparc, j’ai livré une application pour le salon dentaire annuel du Maroc, appréciée par le client. Je travaille avec des outils modernes (Docker, CI/CD, Git) et en équipes Agile. Mon objectif : rejoindre une équipe technique qui construit des produits utiles, alliant développement full-stack et IA.",
         "I take initiative and ownership: when classmates get stuck, I teach them step by step and follow their progress until nobody is left behind.": "Je prends des initiatives et des responsabilités : quand mes camarades sont bloqués, je leur explique pas à pas et je suis leurs progrès jusqu’à ce que personne ne soit laissé de côté.",
@@ -1956,7 +1959,7 @@
         "Beyond code": "Au-delà du code",
         "I teach a step-by-step Laravel course to 20 students.": "J’enseigne un cours Laravel pas à pas à 20 étudiants.",
         "I run school clubs, organising activities and bringing students together around what they want to learn.": "J’anime des clubs à l’école : j’organise des activités et je réunis les étudiants autour de ce qu’ils veulent apprendre.",
-        "05 · Skills": "05 · Compétences",
+        "05 · Skills": "05 · Skills",
         "The tools I build with.": "Les outils avec lesquels je construis.",
         "AI / Data": "IA / Data",
         "06 · Contact": "06 · Contact",
