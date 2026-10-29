@@ -1372,6 +1372,37 @@
       object-fit: cover;
       display: block
     }
+
+    .lang {
+      display: flex;
+      gap: .3rem
+    }
+
+    .lang button {
+      font: 500 .8rem var(--body);
+      padding: .3rem .7rem;
+      color: var(--g);
+      background: transparent;
+      border: 1.5px solid var(--g);
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .lang button[aria-pressed="true"] {
+      background: var(--g);
+      color: #FFFCF2
+    }
+
+    @media (max-width: 560px) {
+      nav b {
+        display: none
+      }
+
+      nav .wrap {
+        gap: .6rem;
+        justify-content: space-between
+      }
+    }
   </style>
 </head>
 
@@ -1430,6 +1461,10 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="fr">FR</button>
+      </div>
     </div>
   </nav>
 
@@ -1444,7 +1479,8 @@
       stroke="#1F3A2E" stroke-width="2" stroke-linecap="round" aria-hidden="true">
       <path d="M1 8q8-10 16 0q8-10 16 0" />
     </svg>
-    <div class="wrap hg">
+
+    <!-- <div class="wrap hg">
       <div>
         <p class="eyebrow">Amine Elgaini · Safi, Morocco · Open to work (Safi &amp; remote)</p>
         <h1>Amine Elgaini</h1>
@@ -1467,7 +1503,31 @@
       <img src="me.webp" alt="Amine Elgaini" width="600" height="750" fetchpriority="high" decoding="async">
     </div>
     </div>
+    </div> -->
+
+    <div class="wrap hg">
+      <div>
+        <p class="eyebrow">Amine Elgaini · Safi, Morocco · Open to work (Safi &amp; remote)</p>
+        <h1>Amine Elgaini</h1>
+        <p class="roles" id="roles" aria-live="polite">Full-Stack Developer</p>
+        <p class="l">I build complete web and mobile products — and I integrate real AI into them: recommendations, text
+          analysis, computer vision.</p>
+        <div class="btns">
+          <a class="btn p" href="#work">See my work</a>
+          <a class="btn" href="#contact">Contact me</a>
+          <a class="btn" href="Amine-Elgaini-CV.pdf" download>Download CV</a>
+        </div>
+        <div class="stats">
+          <div><b>3</b>products built</div>
+          <div><b>1</b>company internship</div>
+          <div><b>20</b>students taught</div>
+        </div>
+      </div>
+      <div class="frame">
+        <img src="me.webp" alt="Amine Elgaini" width="600" height="750" fetchpriority="high" decoding="async">
+      </div>
     </div>
+
     <svg class="lf" style="top:-6px;left:2px;transform:rotate(-30deg)">
       <use href="#lf" />
     </svg><svg class="lf" style="bottom:12px;left:-14px;transform:rotate(70deg);color:#5FA074">
@@ -1629,8 +1689,7 @@
       <div class="bey rv"><svg>
           <use href="#lf" />
         </svg>
-        <div><small>Beyond code</small>I teach a step-by-step Laravel course to 20 students
-          app.</div>
+        <div><small>Beyond code</small>I teach a step-by-step Laravel course to 20 students.</div>
       </div>
       <div class="bey rv"><svg>
           <use href="#lf" />
@@ -1698,7 +1757,7 @@
     <div class="wrap">
       <div class="lab"><svg>
           <use href="#lf" />
-        </svg>05 · Contact</div>
+        </svg>06 · Contact</div>
       <h2 class="rv">Let’s build something useful.</h2>
       <div class="links"><a href="mailto:elgainiamine@gmail.com">elgainiamine@gmail.com</a><a
           href="https://github.com/amineElgaini" rel="noopener">GitHub: amineElgaini</a><a
@@ -1861,6 +1920,96 @@
     </svg></div>
   <script>
     (function () {
+      var FR = {
+        "About": "À propos", "Work": "Projets", "Path": "Parcours", "Skills": "Compétences", "Contact": "Contact",
+        "Amine Elgaini · Safi, Morocco · Open to work (Safi & remote)": "Amine Elgaini · Safi, Maroc · Disponible (Safi et à distance)",
+        "I build complete web and mobile products — and I integrate real AI into them: recommendations, text analysis, computer vision.": "Je construis des produits web et mobiles complets, et j’y intègre de la vraie IA : recommandations, analyse de texte, vision par ordinateur.",
+        "See my work": "Voir mes projets", "Contact me": "Me contacter", "Download CV": "Télécharger mon CV",
+        "products built": "produits réalisés", "company internship": "stage en entreprise", "students taught": "étudiants formés",
+        "01 · About": "01 · À propos",
+        "Full-stack and AI developer trained at YouCode (UM6P).": "Développeur full-stack et IA formé à YouCode (UM6P).",
+        "I design complete web and mobile applications (Flutter, ASP.NET Core, Laravel, React) and integrate AI solutions into them. During an internship at Technoparc, I delivered an application for Morocco’s annual dental salon that the client appreciated. I work with modern tools (Docker, CI/CD, Git) and in Agile teams. My goal: join a technical team building useful products that combine full-stack development and AI.": "Je conçois des applications web et mobiles complètes (Flutter, ASP.NET Core, Laravel, React) et j’y intègre des solutions d’IA. Lors d’un stage chez Technoparc, j’ai livré une application pour le salon dentaire annuel du Maroc, appréciée par le client. Je travaille avec des outils modernes (Docker, CI/CD, Git) et en équipes Agile. Mon objectif : rejoindre une équipe technique qui construit des produits utiles, alliant développement full-stack et IA.",
+        "I take initiative and ownership: when classmates get stuck, I teach them step by step and follow their progress until nobody is left behind.": "Je prends des initiatives et des responsabilités : quand mes camarades sont bloqués, je leur explique pas à pas et je suis leurs progrès jusqu’à ce que personne ne soit laissé de côté.",
+        "Full-stack development (mobile, web, API)": "Développement full-stack (mobile, web, API)",
+        "AI integration in real apps": "Intégration de l’IA dans de vraies applications",
+        "Deployment & automation (Docker, GitHub Actions, Airflow)": "Déploiement et automatisation (Docker, GitHub Actions, Airflow)",
+        "Agile teamwork": "Travail en équipe Agile",
+        "02 · Featured project": "02 · Projet principal",
+        "Neurodental — Morocco dental salon app": "Neurodental — application du salon dentaire du Maroc",
+        "A cross-platform mobile app for Morocco’s annual dental salon. Visitors navigate the salon with an interactive map of exhibitors and stands, get AI recommendations for contacts and products, log in securely, and keep using the app offline.": "Une application mobile multiplateforme pour le salon dentaire annuel du Maroc. Les visiteurs se repèrent grâce à une carte interactive des exposants et des stands, reçoivent des recommandations IA de contacts et de produits, se connectent en toute sécurité et peuvent utiliser l’app hors ligne.",
+        "Delivered to the client and appreciated by them.": "Livrée au client et appréciée par celui-ci.",
+        "03 · Projects": "03 · Projets",
+        "School restaurant platform with AI": "Plateforme de restauration scolaire avec IA",
+        "What I built": "Ce que j’ai construit",
+        "A web platform for a school restaurant — reservations, menus, and complaints — with an AI that analyses complaints and a chatbot that answers students.": "Une plateforme web pour une restauration scolaire — réservations, menus et réclamations — avec une IA qui analyse les réclamations et un chatbot qui répond aux élèves.",
+        "Brain MRI tumour detection": "Détection de tumeurs sur IRM cérébrale",
+        "An AI diagnosis aid that classifies brain MRI images and locates tumours.": "Une aide au diagnostic par IA qui classe les images d’IRM cérébrale et localise les tumeurs.",
+        "Result": "Résultat",
+        "85% classification accuracy · YOLOv8 mAP50 0.89.": "85 % de précision en classification · YOLOv8 mAP50 0,89.",
+        "04 · Experience & education": "04 · Expérience et formation",
+        "Jun–Aug 2026": "Juin–Août 2026", "2025–present": "2025–aujourd’hui",
+        "Full-Stack Developer internship": "Stage Développeur Full-Stack",
+        "Developer in Artificial Intelligence": "Développeur en Intelligence Artificielle",
+        "Self-taught training": "Formation en autodidacte",
+        "ProgrammingAdvices (online)": "ProgrammingAdvices (en ligne)",
+        "Full-Stack Web Development": "Développement Web Full-Stack",
+        "Beyond code": "Au-delà du code",
+        "I teach a step-by-step Laravel course to 20 students.": "J’enseigne un cours Laravel pas à pas à 20 étudiants.",
+        "I run school clubs, organising activities and bringing students together around what they want to learn.": "J’anime des clubs à l’école : j’organise des activités et je réunis les étudiants autour de ce qu’ils veulent apprendre.",
+        "05 · Skills": "05 · Compétences",
+        "The tools I build with.": "Les outils avec lesquels je construis.",
+        "AI / Data": "IA / Data",
+        "06 · Contact": "06 · Contact",
+        "Let’s build something useful.": "Construisons quelque chose d’utile.",
+        "Amine Elgaini · Safi, Morocco": "Amine Elgaini · Safi, Maroc",
+        "Full-Stack Developer": "Développeur Full-Stack",
+        "Mobile Developer": "Développeur Mobile",
+        "AI Integrator": "Intégrateur IA",
+        "Hide avatar": "Masquer l’avatar", "Show avatar": "Afficher l’avatar",
+        "Amine Elgaini — Full-Stack & AI Developer": "Amine Elgaini — Développeur Full-Stack & IA",
+        "Amine Elgaini, full-stack and AI developer from Safi, Morocco. Web and mobile products with real AI: recommendations, text analysis, computer vision.": "Amine Elgaini, développeur full-stack et IA à Safi, Maroc. Produits web et mobiles avec de la vraie IA : recommandations, analyse de texte, vision par ordinateur."
+      };
+      var lang = "en";
+      try { lang = localStorage.getItem("lang") || ((navigator.language || "").slice(0, 2) === "fr" ? "fr" : "en") } catch (e) { }
+      if (lang !== "fr") lang = "en";
+      window.tr = function (s) { return (lang === "fr" && FR[s]) || s };
+
+      function key(s) { return s.replace(/\s+/g, " ").trim() }
+      var items = [], walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT), n;
+      while ((n = walk.nextNode())) {
+        var p = n.parentNode;
+        if (/^(SCRIPT|STYLE)$/.test(p.nodeName) || p.id === "roles" || p.id === "walkerToggle" || p.closest(".lang") || !key(n.nodeValue)) continue;
+        items.push({ n: n, en: n.nodeValue });
+      }
+      var desc = document.querySelector('meta[name="description"]'),
+        title0 = document.title, desc0 = desc && desc.content;
+
+      function set(l) {
+        lang = l;
+        items.forEach(function (it) {
+          var t = l === "fr" && FR[key(it.en)];
+          if (t) { var m = it.en.match(/^(\s*)[\s\S]*?(\s*)$/); it.n.nodeValue = m[1] + t + m[2] }
+          else it.n.nodeValue = it.en;
+        });
+        document.documentElement.lang = l;
+        document.title = tr(title0);
+        if (desc) desc.content = tr(desc0);
+        var r = document.getElementById("roles");
+        r.textContent = tr(r.dataset.en || "Full-Stack Developer");
+        document.getElementById("walkerToggle").textContent = tr(document.body.classList.contains("no-walker") ? "Show avatar" : "Hide avatar");
+        document.querySelectorAll(".lang button").forEach(function (b) {
+          b.setAttribute("aria-pressed", b.dataset.lang === l);
+        });
+        try { localStorage.setItem("lang", l) } catch (e) { }
+      }
+      document.querySelectorAll(".lang button").forEach(function (b) {
+        b.addEventListener("click", function () { set(b.dataset.lang) });
+      });
+      set(lang);
+    })();
+  </script>
+  <script>
+    (function () {
       var w = document.getElementById("walker"), ox, oy, lx;
       function pl(x, y) { w.style.bottom = "auto"; w.style.left = Math.max(0, Math.min(innerWidth - w.offsetWidth, x)) + "px"; w.style.top = Math.max(0, Math.min(innerHeight - w.offsetHeight, y)) + "px" }
       w.addEventListener("pointerdown", function (e) { w.setPointerCapture(e.pointerId); w.classList.add("drag"); var b = w.getBoundingClientRect(); ox = e.clientX - b.left; oy = e.clientY - b.top; lx = e.clientX; pl(b.left, b.top) });
@@ -1872,7 +2021,7 @@
       var t = ["Flutter", "Dart", "ASP.NET Core", "Laravel", "React", "TypeScript", "PostgreSQL", "Docker", "GitHub Actions", "Airflow", "TensorFlow/Keras", "YOLOv8", "Streamlit", "AWS", "Firebase Cloud Messaging", "JWT", "Python"];
       document.getElementById("mq").innerHTML = t.concat(t).map(function (x) { return "<span>" + x + "</span>" }).join("");
       var r = ["Full-Stack Developer", "Mobile Developer", "AI Integrator"], i = 0, e = document.getElementById("roles");
-      if (!matchMedia("(prefers-reduced-motion: reduce)").matches) { setInterval(function () { e.style.opacity = 0; setTimeout(function () { i = (i + 1) % r.length; e.textContent = r[i]; e.style.opacity = 1 }, 350) }, 2600) }
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches) { setInterval(function () { e.style.opacity = 0; setTimeout(function () { i = (i + 1) % r.length; e.dataset.en = r[i]; e.textContent = tr(r[i]); e.style.opacity = 1 }, 350) }, 2600) }
       var rv = document.querySelectorAll(".rv");
       if ("IntersectionObserver" in window) { var o = new IntersectionObserver(function (a) { a.forEach(function (n) { if (n.isIntersecting) { n.target.classList.add("in"); o.unobserve(n.target) } }) }, { threshold: .12 }); rv.forEach(function (n) { o.observe(n) }) } else { rv.forEach(function (n) { n.classList.add("in") }) }
     })();
@@ -1883,7 +2032,7 @@
       try { off = localStorage.getItem("walker-off") === "1" } catch (e) { }
       function apply() {
         document.body.classList.toggle("no-walker", off);
-        b.textContent = off ? "Show avatar" : "Hide avatar";
+        b.textContent = tr(off ? "Show avatar" : "Hide avatar");
         b.setAttribute("aria-pressed", off);
         window.dispatchEvent(new CustomEvent("walker-toggle", { detail: off }));
       }
